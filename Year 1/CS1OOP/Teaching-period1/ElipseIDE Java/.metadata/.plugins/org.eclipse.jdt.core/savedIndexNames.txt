@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+C:\Users\muham\OneDrive - Aston University\Desktop\Comp Sci Degree Docs\Teaching term 1\CS1OOP\ElipseIDE Java\.metadata\.plugins\org.eclipse.jdt.core
+878328056.index
+342692352.index
+1818976391.index
+1865797976.index

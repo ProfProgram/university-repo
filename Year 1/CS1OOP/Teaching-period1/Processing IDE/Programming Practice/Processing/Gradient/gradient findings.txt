@@ -1,0 +1,19 @@
+File for findings when experimenting with for_loop_gradient.pde;
+
+FILE gradient_practice_FUNCTIONAL
+1st loop findings;
+	
+	-	stroke(r,g,b); returns an rgb background() where variables = rgb values
+	-	changing where the i is placed within stroke() controls the color of the gradient
+		-	both colours of the gradient are related to the single set of rgb values (limits the colour 			combinations)
+	-	original value of i will change y level of when the gradient starts, this does not squish the gradient 		it cuts off the colour that would've been there
+	-	increasing the amount by which i is increased from i++ to a higher increment will increase the distance 		between each slice of gradient
+		-	when increment is i++ then gradient is smooth since a new slice occurs every pixel along y-axis
+	-	line(0, i, width, i); line(x1, y1, x2, y2)
+this command creates the shape for the gradient.
+x1 and y1 are the first point so (0 , i) is a point() that acts as a line() since i is variable: it makes the gradient fir the left hand side of the canvas due to x1 being 0
+point(width, i) - potint1 was left-side so point2 is the right-side of the canvas.
+changing line(0, i, width, i) to line(width, i, 0, i) does nothing to chnage gradiant
+	-	chanaging myStrokeWeight value does nothing as far as I can see
+
+FILE rect_gradiant_animation
