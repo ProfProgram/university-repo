@@ -1,4 +1,9 @@
 # UNIVERSITY LOGBOOK
+- [UNIVERSITY LOGBOOK](#university-logbook)
+  * [Short Description](#short-description)
+  * [Directory Tree](#directory-tree)
+  * [Tree Navigation Tips](#tree-navigation-tips)
+    + [OOP Examples](#oop-examples)
 ## Short Description
 This repository is, as the name implies, a logbook of sorts for my University work. Some may have been committed within other repositories as part of group work, but this is a complete collection.
 ## Directory Tree
