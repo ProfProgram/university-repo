@@ -9,17 +9,28 @@ This repository is, as the name implies, a logbook of sorts for my University wo
 ## Directory Tree
 ```bash
 ├───Year 1
-│   └───CS1OOP
-│       ├───Teaching-period1
-│       │   ├───.metadata
-│       │   ├───ElipseIDE Java
-│       │   │   ├───.metadata
-│       │   │   ├───First_Eclipse_Program
-│       │   │   ├───HelloWorldExample
-│       │   │   └───uk.ac.aston.oop.calendar
-│       │   ├───Java-Notepad++
-│       │   └───Processing IDE
-│       └───Teaching-period2
+│   ├───Teaching-period1
+│   │   └───CS1OOP
+│   │       ├───Teaching-period1
+│   │       │   ├───.metadata
+│   │       │   ├───ElipseIDE Java
+│   │       │   ├───Java-Notepad++
+│   │       │   └───Processing IDE
+│   │       └───Teaching-period2
+│   │           ├───JavaWeek13
+│   │           ├───JavaWeek14
+│   │           ├───JavaWeek15
+│   │           ├───JavaWeek16
+│   │           ├───JavaWeek17
+│   │           ├───JavaWeek18
+│   │           ├───JavaWeek19
+│   │           ├───JavaWeek20
+│   │           └───JavaWeek21
+│   └───Teaching-period2
+│       └───CS1IAD
+│           ├───HTML.CSS.JS
+│           ├───PHP
+│           └───SQL
 └───Year 2
 ```
 ## Tree Navigation Tips
