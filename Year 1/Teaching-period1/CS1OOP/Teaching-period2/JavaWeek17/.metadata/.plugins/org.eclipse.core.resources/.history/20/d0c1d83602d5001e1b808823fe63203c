@@ -1,0 +1,21 @@
+package uk.ac.aston.oop.dpatterns.singleton;
+
+import java.util.Random;
+
+public class DiceRoller {
+	
+	private static DiceRoller instance;
+	private Random random;
+	
+	private DiceRoller() {
+		
+	}
+	
+	public static DiceRoller getInstance() {
+		return instance;
+	}
+	
+	public int roll(int faces) {
+		return random.nextInt(1, faces);
+	}
+}

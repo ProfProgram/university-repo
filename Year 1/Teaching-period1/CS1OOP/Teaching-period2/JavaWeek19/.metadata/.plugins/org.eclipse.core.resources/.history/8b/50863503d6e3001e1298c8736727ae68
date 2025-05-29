@@ -1,0 +1,42 @@
+package uk.ac.aston.oop.javafx.prep;
+
+import javafx.collections.FXCollections;
+import javafx.fxml.FXML;
+import javafx.scene.Scene;
+import javafx.scene.control.ListView;
+import javafx.stage.Window;
+import uk.ac.aston.oop.javafx.prep.model.Item;
+import uk.ac.aston.oop.javafx.prep.model.Database;
+
+public class ListController {
+	
+	private Database model;
+	@FXML private ListView<Item> listItems;
+	
+	
+	public ListController(Database model) {
+		this.model = model;
+	}
+	
+	@FXML
+	public void initialize() {
+		listItems.setItems(model.itemsProperty());
+	}
+	
+	// On... events
+	@FXML
+	public void shufflePressed() {
+		FXCollections.shuffle(model.itemsProperty());
+	}
+	@FXML
+	public void removePressed() {
+		Scene scene = listItems.getScene();
+		Window window = scene.getWindow();
+		window.hide();
+	}
+	@FXML
+	public void quitPressed() {
+		
+	}
+	
+}

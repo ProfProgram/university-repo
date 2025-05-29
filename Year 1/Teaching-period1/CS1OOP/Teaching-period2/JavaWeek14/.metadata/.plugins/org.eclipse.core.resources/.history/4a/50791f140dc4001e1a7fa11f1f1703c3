@@ -1,0 +1,11 @@
+package uk.ac.aston.oop.acint.shapes;
+
+public class Cross implements Drawable{
+	protected final static int SIZE = 20;
+	private double centerX;
+	private double centerY;
+	
+	public Cross(double x, double y) {
+		
+	}
+}

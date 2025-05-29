@@ -1,0 +1,38 @@
+package uk.ac.aston.oop.acint.shapes;
+
+import uk.ac.aston.oop.acint.util.GraphicsContextWrapper;
+
+public class Shape {
+
+	private double upperLeftX, upperLeftY;
+	private double width, height;
+
+	public Shape(double ulX, double ulY, double width, double height) {
+		this.upperLeftX = ulX;
+		this.upperLeftY = ulY;
+		this.width  = width;
+		this.height = height;
+	}
+
+	public double getX() { return upperLeftX; }
+
+	public double getY() { return upperLeftY; }
+
+	public double getWidth()  { return width;  }
+
+	public double getHeight() { return height; }
+
+	public void draw(GraphicsContextWrapper gc) {
+		System.out.println("You forgot to write the draw method in " + getClass().getName());
+	}
+	
+	public void move(GraphicsContextWrapper gc, double dx, double dy) {
+		this.upperLeftX += dx;
+		this.upperLeftY += dy;
+		
+		if (upperLeftX + width > gc.width()) {
+			this.upperLeftX = gc.width() - width;
+		}
+	}
+
+}

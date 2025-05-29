@@ -1,0 +1,182 @@
+header,h4,h2,a,p,label {
+    font-family:Arial, Helvetica, sans-serif;
+}
+header {
+    font-size: 10vw;
+}
+
+/* nav bar */
+nav header {
+    display: inline;
+    float: right;
+    font-size: large;
+    font-weight:500;
+    background-color: #dddddd;
+    padding: 20px 10px;
+    
+}
+nav li {
+    display: inline;
+    float:left; 
+}
+nav li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 22px 16px;
+    text-decoration: none;
+    background-color: #dddddd;
+}
+nav ul {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color: #dddddd;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+li a:hover {
+    background-color: #9c9c9c;
+}
+/* Current page*/
+.active {
+    background-color: rgb(118, 118, 253);
+}
+
+/* HOME PAGE */
+#main-home {
+    padding-top: 60px;
+}
+#contact{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    padding-top: 10px;
+}
+#img-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+#img-me img {
+    max-width: 450px;
+    border:2px solid blue;
+}
+#links {
+    padding: 10px;
+    text-align: center;
+}
+#contact, #links, #img-me {
+    background-color: #eee;
+}
+#education {
+    text-align: center;
+}
+#work-experience {
+    text-align: center;
+    background-color: #eee;
+    padding: 10px;
+}
+#skills blockquote {
+    width: 45%;
+    text-align: center;
+    margin: 0 auto;
+}
+#skills {
+    text-align: center;
+    padding-bottom: 5px;
+}
+#skills div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#skills img {
+    max-width: 100px;
+}
+#interests {
+    display:flex;
+    justify-content: space-evenly;
+    background-color: #eee;
+    padding: 10px;
+}
+/* PORTFOLIO PAGE */
+#projects {
+    padding-top: 50px; 
+}
+#project {
+    text-align: center;
+}
+#project img {
+    max-width: 450px;
+    padding-right: 5vw;
+    padding-left: 5vw;
+}
+/* CONTACT PAGE */
+#contactPage {
+    padding-top: 60px;
+}
+#error {
+    font-size: 0.75vw;
+}
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+#modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#form {
+    padding-top: 5%;
+    text-align: center;
+}
+/* image of me - used on contact-me page*/
+#me {
+    margin: auto;
+    margin-left: 45%;
+    padding-top: 5%;
+}
+
+#me img {
+    border: 3px solid rgb(118, 118, 253);
+    max-height: 50%;
+    max-width: 25%;
+}
+footer {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 50px;
+}

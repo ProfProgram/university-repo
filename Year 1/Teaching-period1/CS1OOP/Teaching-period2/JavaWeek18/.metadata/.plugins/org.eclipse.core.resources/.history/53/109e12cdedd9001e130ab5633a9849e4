@@ -1,0 +1,121 @@
+package uk.ac.aston.oop.jcf.todo;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Random;
+
+/**
+ * To-do list, implemented through a JCF List.
+ */
+public class ToDoList implements Iterable<ToDoItem> {
+
+	protected final List<ToDoItem> items = new ArrayList<>();
+
+	@Override
+	public Iterator<ToDoItem> iterator() {
+		return items.iterator();
+	}
+
+	/**
+	 * Returns <code>true</code> if the list is empty, <code>false</code> otherwise.
+	 * 
+	 * @return true if the list is empty, false if not.
+	 */
+	public boolean isEmpty() {
+		return items.isEmpty();
+	}
+
+	/**
+	 * Adds an item at the end of the list.
+	 *
+	 * @param toDoItem Item to be added.
+	 */
+	public void add(ToDoItem toDoItem) {
+		items.add(toDoItem);
+	}
+
+	/**
+	 * Returns the number of items of the list.
+	 *
+	 * @return Number of items in the list.
+	 */
+	public int size() {
+		return items.size();
+	}
+
+	/**
+	 * Marks the <code>i</code>-th item in the list as done.
+	 *
+	 * @param i Position of the item, starting at 0.
+	 */
+	public void markDone(int i) {
+		// TODO needs to be implemented
+		items.get(i).setDone(true);
+	}
+
+	/**
+	 * Removes the <code>i</code>-th item from the list.
+	 *
+	 * @param i Position of the item, starting at 0.
+	 */
+	public void remove(int i) {
+		items.remove(i);
+	}
+
+	/**
+	 * Removes all entries whose description contains the specified <code>substring</code>.
+	 * 
+	 * @param substring Search string.
+	 */
+	public void removeAllContaining(String substring) {
+		// TODO needs to be implemented
+		while (items.iterator().hasNext()) {
+			ToDoItem item = iterator().next();
+			if (item.getDescription().contains(substring)) {
+				iterator().remove();
+			}
+		}
+	}
+
+	/**
+	 * Remove all items marked as done. 
+	 */
+	public void removeAllDone() {
+		// TODO needs to be implemented
+		while (items.iterator().hasNext()) {
+			ToDoItem item = iterator().next();
+			if (item.isDone()) {
+				iterator().remove();
+			}
+		}
+	}
+
+	/**
+	 * Moves the <code>i</code>-th item to the first position of the list.
+	 *
+	 * @param i Position of the item, starting at 0.
+	 */
+	public void moveToTop(int i) {
+		// TODO needs to be implemented
+		if (i > 0) {
+			ToDoItem removedItem = items.remove(i);
+			items.add(0, removedItem);
+		}
+	}
+
+	/**
+	 * Shuffles the list by visiting each position and swapping the element
+	 * at that position with the element at another random position.
+	 */
+	public void shuffle(Random rnd) {
+		// TODO needs to be implemented
+		for (int i = 0; i < items.size(); i++) {
+			ToDoItem item = items.get(i);
+			int otherPosition = rnd.nextInt(items.size() + 1);
+			items.set(i, items.get(otherPosition));
+			items.set(otherPosition, item);
+		}
+	}
+
+}

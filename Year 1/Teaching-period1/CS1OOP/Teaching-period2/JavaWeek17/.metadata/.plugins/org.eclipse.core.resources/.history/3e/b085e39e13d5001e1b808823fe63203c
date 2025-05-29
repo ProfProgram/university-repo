@@ -1,0 +1,14 @@
+package uk.ac.aston.oop.dpatterns.afactory;
+
+public class JFXDrawing {
+	
+	private javafx.scene.shape.Rectangle rectangle;
+	
+	public JFXDrawing(javafx.scene.Group container, int width, int height) {
+		
+	}
+	
+	public void setFill(int r, int g, int b) {
+		
+	}
+}

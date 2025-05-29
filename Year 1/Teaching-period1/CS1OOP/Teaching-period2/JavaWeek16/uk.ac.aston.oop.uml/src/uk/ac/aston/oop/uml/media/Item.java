@@ -1,0 +1,37 @@
+package uk.ac.aston.oop.uml.media;
+
+public abstract class Item {
+	private String title;
+	private int playMinutes;
+	private String comment;
+	private boolean owned;
+	public Item(String title, int playMinitues) {
+		this.title = title;
+		this.playMinutes = playMinitues;
+		this.comment = "";
+		this.owned = false;
+	}
+	public String getComment() {
+		return comment;
+	}
+	public void setComment(String c) {
+		comment = c;
+	}
+	public boolean isOwned() {
+		return owned;
+	}
+	public void setOwned(boolean o) {
+		owned = o;
+	}
+	public int getPlayMinutes() {
+		return playMinutes;
+	}
+	public String toString() {
+		if (isOwned()) {
+			return "*" + title + ": " + playMinutes + " - " + comment;
+		}
+		else {
+			return title + ": " + playMinutes + " - " + comment;			
+		}
+	}
+}

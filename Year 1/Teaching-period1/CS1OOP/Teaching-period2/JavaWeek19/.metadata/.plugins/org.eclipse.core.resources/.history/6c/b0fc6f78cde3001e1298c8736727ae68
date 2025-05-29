@@ -1,0 +1,20 @@
+package uk.ac.aston.oop.javafx.prep;
+
+import javafx.scene.control.ListView;
+
+public class ListController {
+	
+	private Database model;
+	@FMXL
+	private ListView<Items> listItems;
+	
+	
+	public ListController(Database model) {
+		
+	}
+	
+	@FMXL
+	public void initialize() {
+	}
+	
+}

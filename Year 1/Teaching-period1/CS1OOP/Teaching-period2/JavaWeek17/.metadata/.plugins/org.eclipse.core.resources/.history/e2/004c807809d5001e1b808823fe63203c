@@ -1,0 +1,6 @@
+package uk.ac.aston.oop.dpatterns.fmethod;
+
+public class DryRunCommand implements Runnable{
+	
+	public void run();
+}

@@ -1,0 +1,9 @@
+@startuml
+class Animal
+class Fox
+class Rabbit
+class Grid
+class GridCell
+class Field
+class Simulator
+@enduml

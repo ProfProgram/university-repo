@@ -1,0 +1,73 @@
+			CS1IAD Port 3:
+
+--------------------------------------------------------------
+		     Tasks for AProject
+--------------------------------------------------------------
+
+setup server for running website and then do same for database
+
+make report in word then save as pdf 		(almost done just needs link to website)
+
+Security:
+At least 5;
+Authentication		-- done for login, register and add/update forms
+Authorisation
+Form validation		-- has form validation for login, register, add, and update
+Handle injections	-- done for all forms/interactions with SQL database
+Hash password		-- am hashing passwords before saving to database
+Cross-Site request forgery
+
+Project report:
+PDF format, no longer than 2 pages
+In order;
+	- Basic info
+		- Name
+		- Student Num
+		- Hyperlink to entry page for website
+		- One user's username and password
+		- Optional - GitHub link for source code
+	- List of required functions and corresponding source 	file
+	- List security features used and corresponding source 	files
+	- Other things which need examiners attention when 	running website
+Avoid screenshots of website
+
+--------------------------------------------------------------
+		   Assignment Brief Summary
+--------------------------------------------------------------
+
+AProject
+	- dynamic database-driven
+	- manages software projects of Aston Uni students
+	- needs login page that connects to database and 	validates login in for access will also require error	messages for invalid submissions
+	- Has signup page which adds to sql database so that 	logins can be made
+	- after login must have button for adding projects and 	have a database view (similar to recipes.exe)
+	- View must be public; The add button sends 	information to database that can be accessed via 	website without need to login, must login to add to 	database 
+
+--------------------------------------------------------------
+		     Analysis for AProject		:DONE:
+--------------------------------------------------------------
+
+aproject.sql
+	- Users
+		-uid (primary)
+		- username
+		- password
+		- email
+	- Projects
+		- pid (primary)
+		- title
+		- start date
+		- end date
+		- short desc
+		- phase
+			- Enum,"design","development", 				"testing","deployment" and 				"complete"
+		- uid (foreign, users)
+			- One user per project and many 			projects per user
+Website view
+	- Database
+		- first show = basic detail (title, start date, 		short desc)
+		- on click = detailed view (basic + end date, 			phase, user email)
+		- Search function for title or start date
+		- Register to become a registered user
+
+--------------------------------------------------------------

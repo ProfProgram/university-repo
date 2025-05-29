@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/Favicon.ico" type="image/x-icon">   
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <title>My CV Website</title>
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Portfolio.html">My Portfolio</a></li>
+            <li><a class="active" href="Contact.html">Contact Me</a></li>
+            <header class="main-header">My CV Website
+        </ul>
+    </nav>
+    <main id="contactPage">
+        <section name="form">
+            <form id="form">
+                <section id="contact-info">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" required><br>
+                    <label for="lanme">Last Name:</label>
+                    <input type="text" id="lname" required><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required><br>
+                    <label for="c-email">Confirm Email:</label>
+                    <input type="email" id="c-email" required><br>
+                    <label for="phone">Phone Number:</label>
+                    <input type="number" id="phone" required><br>
+                </section>
+                <section id="app-maker">
+                    <br>
+                    <label for="app-date">Appointment Date:</label>
+                    <input type="date" id="app-date" required><br>
+                    <label for="app-dur">Appointment Duration (in hrs):</label>
+                    <input type="number" id="app-dur" max="3" min="1" value="1" required><br>
+                    <label for="desc">Appointment Description:</label>
+                    <input type="text" id="desc" required><br>
+                </section>
+                <section id="contact-method">
+                    <label for="contChoice">Preferred Contact Method:</label>
+                    <select id="contChoice">
+                        <option id="P-empty"></option>
+                        <option id="P-email">Email</option>
+                        <option id="P-phone">Phone</option>
+                        <option id="P-both">Both</option>
+                    </select>
+                </section>
+                <br>
+                <input type="submit" id="submit"><br>
+                <em id="error"></em>
+                <!-- <p id="errorEmails">testing</p> -->
+            </form>
+        </section>
+        <section class="modal">
+            <div id="modal">
+                <div id="modal-content">
+                    <span class="close">&times;</span>
+                    <p>To: 210163492@aston.ac.uk</p>
+                    <p>Subject: Appointment Booking</p>
+                    <section id="popUpBody">
+                        <p id="Name"></p>
+                        <p id="appBooking"></p>
+                        <p>Appointment Description: <p id="appDesc"></p></p>
+                        <p id="conMethod"></p>
+                        <button id="confirmBttn">Confirm</button>
+                    </section>
+                </div>
+            </div>
+        </section>
+            
+        <!-- <section id="mailTo">
+            <br>
+            <a href="mailto:210163492@aston.ac.uk subject:appointment body:">Confirm</a>
+            <button id="test">TEST</button>
+            <button id="test2">TEST 2</button>
+            <br>
+        </section> -->
+    </main>
+</body>
+</html>

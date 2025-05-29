@@ -1,0 +1,6 @@
+@startuml
+title My First Diagram
+
+class Animal
+class Dog
+@enduml

@@ -1,0 +1,13 @@
+@startuml
+class Animal
+class Fox extends Animal
+class Rabbit extends Animal
+class Grid
+class GridCell
+class Field
+class Simulator
+Simulator *-right- Field : simulates
+Field *-right- Grid : grid
+Grid *-right- "1..*" GridCell : cells
+GridCell o-right "*" Animal : contents
+@enduml

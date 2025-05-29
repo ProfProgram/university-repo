@@ -1,0 +1,8 @@
+@startuml
+class Lecturer -down- Student : teaches
+class Student
+class Window
+class Frame
+class Room
+class Wall
+@enduml

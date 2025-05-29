@@ -1,0 +1,11 @@
+@startuml
+class Lecturer
+class Student
+class Window
+class Frame
+class Room
+class Wall
+Lecturer "1..*" -down- "*" Student : teaches
+Window 0-down- Frame : has
+
+@enduml

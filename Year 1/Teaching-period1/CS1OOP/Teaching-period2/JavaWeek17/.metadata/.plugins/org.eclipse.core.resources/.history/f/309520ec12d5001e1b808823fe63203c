@@ -1,0 +1,14 @@
+package uk.ac.aston.oop.dpatterns.afactory;
+
+public class JFXCircle {
+	
+	private javafx.scene.shape.Circle circle;
+	
+	public JFXCircle(javafx.scene.Group container, int cs, int cy, int radius) {
+		
+	}
+	
+	public void setFill(int r, int g, int b) {
+		
+	}
+}

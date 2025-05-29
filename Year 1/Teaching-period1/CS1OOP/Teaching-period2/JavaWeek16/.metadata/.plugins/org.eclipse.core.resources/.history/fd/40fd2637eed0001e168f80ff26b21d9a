@@ -1,0 +1,9 @@
+@startuml
+title My First Diagram
+
+class Animal {
+- name: String
++ getName(): String
+}
+class Dog extends Animal
+@enduml

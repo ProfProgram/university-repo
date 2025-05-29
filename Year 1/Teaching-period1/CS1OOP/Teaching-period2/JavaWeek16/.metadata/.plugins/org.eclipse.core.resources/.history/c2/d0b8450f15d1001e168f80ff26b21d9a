@@ -1,0 +1,17 @@
+package uk.ac.aston.oop.uml.media;
+
+public class Database {
+	
+	public Database() {
+		
+	}
+	public void addItem(Item i) {
+		
+	}
+	public void print() {
+		
+	}
+	public void main(String[] args) {
+		Database d = new Database();
+	}
+}

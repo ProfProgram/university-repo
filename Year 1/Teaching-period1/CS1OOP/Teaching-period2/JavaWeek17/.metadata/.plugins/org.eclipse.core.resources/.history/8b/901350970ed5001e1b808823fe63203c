@@ -1,0 +1,80 @@
+package uk.ac.aston.oop.dpatterns.fmethod;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public abstract class AbstractCommandReader {
+
+	// 1. TODO - abstract method for creating the command
+
+	public void run() throws IOException {
+		try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in, "UTF-8"))) {
+			System.out.println("Type one of 'left', 'right', 'up', 'down' or 'exit'.");
+
+			System.out.print("> ");
+			String line;
+			boolean done = false;
+			while (!done && (line = br.readLine()) != null) {
+				line = line.trim().toLowerCase();
+				done = processLine(line);
+				System.out.print("> ");
+			}
+		}
+	}
+	
+	protected abstract Runnable createMovementCommand(int dx, int dy);
+
+	protected boolean processLine(String line) {
+		// 2. TODO - create and run the command based on the line, then return
+		// false (not done yet) or true (done, should exit)
+		if (line.equals("left")) {
+			createMovementCommand(-1, 0);
+			try {
+				run();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return false;
+		}
+		else if (line.equals("right")) {
+			createMovementCommand(1, 0);
+			try {
+				run();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return false;
+		}
+		else if (line.equals("down")) {
+			createMovementCommand(0, 1);
+			try {
+				run();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return false;
+		}
+		else if (line.equals("up")) {
+			createMovementCommand(0, -1);
+			try {
+				run();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return false;
+		}
+		else if (line.equals("exit")) {
+			return true;
+		}
+		else {
+			System.err.println("invalid command");
+			return false;
+		}
+	}
+	
+}

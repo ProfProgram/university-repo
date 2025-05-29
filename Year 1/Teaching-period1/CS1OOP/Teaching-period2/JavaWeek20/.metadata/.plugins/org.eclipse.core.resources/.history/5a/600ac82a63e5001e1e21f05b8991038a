@@ -1,0 +1,25 @@
+package uk.ac.aston.oop.javafx.assessed;
+
+import javafx.fxml.FXML;
+
+public class CreateCDController {
+	
+	@FXML private javafx.scene.control.TextField titleText, artText;
+	@FXML private javafx.scene.control.CheckBox ownCheck;
+	@FXML private javafx.scene.control.Slider playSlide, trackSlide;
+	@FXML private javafx.scene.control.Label playLabel, trackLabel;
+	
+	public CreateCDController() {
+		
+	}
+	
+	// OnAction's
+	@FXML
+	public void createPressed() {
+		System.out.println("create was pressed!");
+	}
+	@FXML
+	public void cancelPressed() {
+		System.out.println("cancel was pressed!");
+	}
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab</title>
+    <link rel="icon" href="images/favicon.ico?v=2" type="image/x-icon/">
+
+</head>
+<body>
+    <h1>Aston fitness</h1>
+    <h2>Sign Up Requirements</h2>
+    <form>
+        <label>First Name: </label> <input placeholder="John/Jane"><br>
+        <label>Last Name: </label> <input placeholder="Doe"><br>
+        <label>Date of Birth: </label> <input type="date"><br>
+        <label>Email: </label><input type="email" placeholder="John/Jane.Doe123@email.com" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"><br>
+        <label>Password: </label><input type="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 5 or more characters"><br>
+        <label>Sex: </label><input list="Demo1"><br>
+        <datalist id="Demo1">
+            <option value="Male">
+            <option value="Female">
+            <option value="Prefer not to say">
+        </datalist>
+        <br>
+        <button type="submit">Sign Up!</button>
+        <br>
+    </form>
+    <br><br>
+    <a href="index.html">
+        <button>
+            Back
+        </button>
+    </a>
+</body>
+</html>

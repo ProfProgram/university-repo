@@ -1,0 +1,5 @@
+package uk.ac.aston.oop.acint.shapes;
+
+public interface Drawable {
+
+}

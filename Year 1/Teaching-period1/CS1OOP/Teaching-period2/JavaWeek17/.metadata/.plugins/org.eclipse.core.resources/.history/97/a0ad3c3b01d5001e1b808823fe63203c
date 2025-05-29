@@ -1,0 +1,21 @@
+package uk.ac.aston.oop.dpatterns.singleton;
+
+public class Player {
+	
+	private int dieFaces;
+	
+	public Player(int dieFaceCount) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public int roll() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public int getDieFaces() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

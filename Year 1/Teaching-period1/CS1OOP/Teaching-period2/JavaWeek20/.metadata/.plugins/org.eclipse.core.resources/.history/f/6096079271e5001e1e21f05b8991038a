@@ -1,0 +1,57 @@
+package uk.ac.aston.oop.javafx.assessed;
+
+import javafx.fxml.FXML;
+import uk.ac.aston.oop.javafx.assessed.model.CD;
+
+public class CreateCDController {
+	
+	@FXML private javafx.scene.control.TextField titleText, artText;
+	@FXML private javafx.scene.control.CheckBox ownCheck;
+	@FXML private javafx.scene.control.Slider playSlide, trackSlide;
+	@FXML private javafx.scene.control.Label playLabel, trackLabel;
+//	DoubleProperty listenPlaySlide, listenTrackSlide;
+	
+	public CreateCDController() {
+		
+	}
+	
+	/*
+	 * Ways to get slider.getValue() as real value and as integer value
+	 * System.out.println("Slider Val: "+trackSlide.getValue()); -> as double
+	 * System.out.println("Slider Val as int: "+(int)trackSlide.getValue()); -> as int
+	 */
+	
+	@FXML
+	public void initialize() {
+		final String playText = playLabel.getText();
+		final String trackText = trackLabel.getText();
+		playSlide.valueProperty().addListener((obs, oldVal, newVal)-> {
+//			playSlide.setValue(Math.round(newVal.doubleValue()));
+			int intVal = newVal.intValue();
+			playLabel.setText(playText +  " " + intVal + " seconds");
+			
+		});
+		trackSlide.valueProperty().addListener((obs, oldVal, newVal)-> {
+//			trackSlide.setValue(Math.round(newVal.doubleValue()));
+			int intVal = newVal.intValue();
+			trackLabel.setText(trackText + " " + intVal);
+			
+		});
+	}
+	
+	// OnAction's
+	@FXML
+	public void createPressed() {
+//		System.out.println("create was pressed!");
+		CD newCD = new CD(titleText.getText(), artText.getText(), (int)trackSlide.getValue(), (int)playSlide.getValue());
+		if (ownCheck.isSelected()) {
+			newCD.setOwn(true);
+		} else {
+			newCD.setOwn(false);
+		}
+	}
+	@FXML
+	public void cancelPressed() {
+		titleText.getScene().getWindow().hide();
+	}
+}

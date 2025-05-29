@@ -1,0 +1,22 @@
+package uk.ac.aston.oop.dpatterns.singleton;
+
+public class Player {
+	
+	private int dieFaces;
+	
+	public Player(int dieFaceCount) {
+		// TODO Auto-generated constructor stub
+		this.dieFaces = dieFaceCount;
+	}
+
+	public int roll(DiceRoller dice) {
+		// TODO Auto-generated method stub
+		return dice.roll(dieFaces);
+	}
+
+	public int getDieFaces() {
+		// TODO Auto-generated method stub
+		return dieFaces;
+	}
+
+}

@@ -1,0 +1,18 @@
+package uk.ac.aston.oop.dpatterns.fmethod;
+
+public class ExecutingCommand implements Runnable{
+	
+	private ExecutingCommandReader reader;
+	private int dx, dy;
+	
+	public ExecutingCommand(ExecutingCommandReader reader, int dx, int dy) {
+		
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

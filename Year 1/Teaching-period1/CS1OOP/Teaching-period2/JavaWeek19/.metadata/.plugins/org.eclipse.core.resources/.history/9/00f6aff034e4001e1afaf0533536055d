@@ -1,0 +1,33 @@
+package uk.ac.aston.oop.javafx.prep;
+
+import javafx.fxml.FXML;
+import uk.ac.aston.oop.javafx.prep.model.Item;
+
+public class RemoveController {
+	
+	private javafx.scene.control.Label lblItem;
+	private Item selectedItem;
+	private boolean confirmed = false;
+	
+	public RemoveController(Item selectedItem) {
+		this.selectedItem = selectedItem;
+	}
+	
+	public boolean isConfirmed() {
+		return this.confirmed;
+	}
+	
+	@FXML
+	public void initialize() {
+		
+	}
+	// On... methods (for buttons)
+	@FXML
+	public void cancelPressed() {
+		
+	}
+	@FXML
+	public void confirmPressed() {
+		
+	}
+}

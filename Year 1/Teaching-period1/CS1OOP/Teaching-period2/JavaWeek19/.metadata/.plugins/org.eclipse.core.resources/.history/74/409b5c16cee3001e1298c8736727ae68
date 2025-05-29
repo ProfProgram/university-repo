@@ -1,0 +1,33 @@
+package uk.ac.aston.oop.javafx.prep;
+
+import javafx.scene.control.ListView;
+
+public class ListController {
+	
+	private Database model;
+	@FXML private ListView<Item> listItems;
+	
+	
+	public ListController(Database model) {
+		
+	}
+	
+	@FXML
+	public void initialize() {
+	}
+	
+	// On... events
+	@FXML
+	public void shufflePressed() {
+		
+	}
+	@FXML
+	public void removePressed() {
+		
+	}
+	@FXML
+	public void quitPressed() {
+		
+	}
+	
+}

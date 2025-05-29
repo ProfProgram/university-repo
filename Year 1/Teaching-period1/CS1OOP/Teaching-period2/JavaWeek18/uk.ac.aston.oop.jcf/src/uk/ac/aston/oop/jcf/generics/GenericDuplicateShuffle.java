@@ -1,0 +1,52 @@
+package uk.ac.aston.oop.jcf.generics;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Random;
+
+import uk.ac.aston.oop.jcf.todo.ToDoItem;
+
+public class GenericDuplicateShuffle {
+
+	public static void main(String[] args) {
+		// Uncomment when your duplicate and shuffle methods are ready.
+		// You shouldn't have to change anything in this program.
+
+		
+		Random rnd = new Random();
+
+		List<Object> l = new ArrayList<>();
+		duplicate("A", 2, l);
+		duplicate("B", 3, l);
+		duplicate("C", 2, l);
+		shuffle(rnd, l);
+		System.out.println(l);
+		
+
+		
+		List<Number> ln = new LinkedList<>();
+		duplicate(1.0f, 3, ln);
+		duplicate(1.5f, 5, ln);
+		duplicate(5, 2, ln);
+		shuffle(rnd, ln);
+		System.out.println(ln);
+		
+	}
+	
+	public static <T> void shuffle(Random rnd, List<T> items) {
+		// TODO needs to be implemented
+		for (int i = 0; i < items.size(); i++) {
+			T item = items.get(i);
+			int otherPosition = rnd.nextInt(items.size());
+			items.set(i, items.get(otherPosition));
+			items.set(otherPosition, item);
+		}
+	}
+	
+	public static <T> void duplicate(T elem, int n, List<? super T> items) {
+		for (int i = 0; i < n; i++) {
+			items.add(elem);
+		}
+	}
+}

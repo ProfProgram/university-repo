@@ -1,0 +1,35 @@
+@startuml
+abstract class Animal {
++ act(r : Random)
+# breed(r : Random)
++ getAge() : int
++ getLifespan() : int
++ getMaxLitterSize() :int
++ isAlive() : boolean
++ setAlive(alive: boolean)
+class Fox extends Animal{
++ act(r : Random)
+}
+class Rabbit extends Animal{
++ act(r : Random)
+}
+class Grid {
++ getWidth() : int
++ getHeight() : int
++ get(i: int, j: int): GridCell
+}
+class GridCell {
++ getContents(): List<Animal>
++ getRow(): int
++ getColumn(): int
++ getGrid(): Grid
++ getAdjacent(): List<GridCell>
++ getFreeAdjacent(): List<GridCell>
++ getRandomFreeAdjactent(r: Random): GridCell
+class Field
+class Simulator
+Simulator *-right- Field : simulates
+Field *-right- Grid : grid
+Grid *-right- "1..*" GridCell : cells
+GridCell o-right "*" Animal : contents
+@enduml

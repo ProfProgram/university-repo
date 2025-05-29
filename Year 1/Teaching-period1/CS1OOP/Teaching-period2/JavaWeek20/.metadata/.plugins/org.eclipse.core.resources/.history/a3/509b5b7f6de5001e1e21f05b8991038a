@@ -1,0 +1,37 @@
+package uk.ac.aston.oop.javafx.assessed;
+
+import javafx.beans.property.DoubleProperty;
+import javafx.fxml.FXML;
+
+public class CreateCDController {
+	
+	@FXML private javafx.scene.control.TextField titleText, artText;
+	@FXML private javafx.scene.control.CheckBox ownCheck;
+	@FXML private javafx.scene.control.Slider playSlide, trackSlide;
+	@FXML private javafx.scene.control.Label playLabel, trackLabel;
+//	DoubleProperty listenPlaySlide, listenTrackSlide;
+	
+	public CreateCDController() {
+		
+	}
+	
+	@FXML
+	public void initialize() {
+		playSlide.valueProperty().addListener((obs, oldVal, newVal)-> {
+//			playSlide.setValue(Math.round(newVal.doubleValue()));
+			int intVal = newVal.intValue();
+			playLabel.setText("Test(value): " + intVal);
+			
+		});
+	}
+	
+	// OnAction's
+	@FXML
+	public void createPressed() {
+		System.out.println("create was pressed!");
+	}
+	@FXML
+	public void cancelPressed() {
+		titleText.getScene().getWindow().hide();
+	}
+}

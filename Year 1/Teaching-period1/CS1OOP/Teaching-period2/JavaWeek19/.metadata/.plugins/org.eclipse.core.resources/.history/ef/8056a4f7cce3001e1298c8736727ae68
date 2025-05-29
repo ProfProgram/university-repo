@@ -1,0 +1,17 @@
+package uk.ac.aston.oop.javafx.prep;
+
+public class ListController {
+	
+	private Database model;
+	private ListView<Items> listItems;
+	
+	
+	public ListController() {
+		
+	}
+	
+	@FMXL
+	public void initialize() {
+	}
+	
+}

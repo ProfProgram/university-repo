@@ -1,0 +1,79 @@
+package uk.ac.aston.oop.javafx.prep;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.Optional;
+
+import javafx.collections.FXCollections;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.ListView;
+import javafx.scene.control.MultipleSelectionModel;
+import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.Window;
+import uk.ac.aston.oop.javafx.prep.model.Item;
+import uk.ac.aston.oop.javafx.prep.model.Database;
+
+public class ListController {
+	
+	private Database model;
+	@FXML private ListView<Item> listItems;
+	
+	
+	public ListController(Database model) {
+		this.model = model;
+	}
+	
+	@FXML
+	public void initialize() {
+		listItems.setItems(model.itemsProperty());
+	}
+	
+	// On... events
+	@FXML
+	public void shufflePressed() {
+		FXCollections.shuffle(model.itemsProperty());
+	}
+	@FXML
+	public void removePressed() {
+		MultipleSelectionModel<Item> selModel = listItems.getSelectionModel();
+		int selIndex = selModel.getSelectedIndex();
+		if (selIndex > -1) {
+			Item selItem = selModel.getSelectedItem();
+			try {
+				FXMLLoader loader = new FXMLLoader();
+				URL fxmlLocation = getClass().getResource("RemoveItem.fxml");
+				loader.setLocation(fxmlLocation);
+				RemoveController rc = new RemoveController(selItem);
+				loader.setController(rc);
+				VBox root = loader.load();
+				
+				Stage stage = new Stage();
+				stage.initModality(Modality.APPLICATION_MODAL);
+				
+				Scene scene = new Scene(root, 200, 200);
+				stage.setTitle("Remove Alert");
+				stage.setScene(scene);
+				stage.showAndWait();
+				
+				if (rc.isConfirmed()) {
+					model.itemsProperty().remove(selIndex);
+				}
+			} catch (IOException ex) {
+				ex.printStackTrace();
+			}
+		}
+	}
+	@FXML
+	public void quitPressed() {
+		Scene scene = listItems.getScene();
+		Window window = scene.getWindow();
+		window.hide();
+//		System.out.println("quit");
+	}
+}

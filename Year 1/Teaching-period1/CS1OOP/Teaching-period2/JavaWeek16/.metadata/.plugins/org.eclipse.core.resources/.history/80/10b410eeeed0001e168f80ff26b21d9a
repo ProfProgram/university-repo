@@ -1,0 +1,10 @@
+@startuml
+title Interface diagram
+interface Iterable {
++ iterator() : Iterator
+}
+interface Collection extends Iterable {
++ clear()
+}
+abstract class AbstractList implements Colleciton
+@enduml

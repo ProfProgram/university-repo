@@ -1,0 +1,4 @@
+@startuml
+title Interface diagram
+interface Iterable
+@enduml

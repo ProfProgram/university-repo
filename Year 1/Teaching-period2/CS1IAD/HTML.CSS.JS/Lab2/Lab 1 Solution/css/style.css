@@ -1,0 +1,54 @@
+h1,h2,h3 {
+    font-family: Arial,Helvetica,sans-serif;
+    color: rgb(131,29,142);
+}
+h2 {
+    text-align: center;
+    width: 100%;
+}
+#main-header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+#join-up-message {
+    height:500px;
+    background-color: #eee;
+    text-align: center;
+}
+#join-up-message h2 {
+    padding-top: 200px;
+}
+#benefits {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+    text-align:center;
+}
+#testimonials {
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin:0 auto;
+    justify-content:space-around;
+}
+#testimonials blockquote {
+    width: 45%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#testimonials blockquote p {
+    font-style: italic;
+}
+#sign-up {
+    height:500px;
+    background-color: #eee;
+    text-align: left;
+    padding:10px;
+}

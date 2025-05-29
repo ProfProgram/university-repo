@@ -1,0 +1,7 @@
+@startuml
+title Interface diagram
+interface Iterable {
++ iterator() : Iterator
+}
+interface Collection extends Iterable
+@enduml

@@ -1,0 +1,5 @@
+package uk.ac.aston.oop.uml.media;
+
+public class Video {
+
+}

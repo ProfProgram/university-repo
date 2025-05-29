@@ -1,0 +1,33 @@
+package uk.ac.aston.oop.acint.shapes;
+
+import uk.ac.aston.oop.acint.util.GraphicsContextWrapper;
+
+public class Cross implements Drawable{
+	protected final static int SIZE = 20;
+	private double centerX;
+	private double centerY;
+	
+	public Cross(double x, double y) {
+		this.centerX = x;
+		this.centerY = y;
+	}
+	
+	@Override
+	public void draw(GraphicsContextWrapper gc) {
+		gc.line(centerX - SIZE/2, centerY - SIZE/2, centerX + SIZE/2, centerY + SIZE/2);
+		gc.line(centerX + SIZE/2, centerY - SIZE/2, centerX - SIZE/2, centerY + SIZE/2);
+	}
+	
+	@Override
+	public void move(GraphicsContextWrapper gc, double dx, double dy) {
+		this.centerX += dx;
+		this.centerY += dy;
+		
+		if (centerX + SIZE/2 > gc.width()) {
+			this.centerX = gc.width() - SIZE/2;
+		}
+		if (centerY + SIZE/2 > gc.height()) {
+			this.centerY = gc.height() - SIZE/2;
+		}
+	}
+}

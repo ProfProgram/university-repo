@@ -1,0 +1,5 @@
+package uk.ac.aston.oop.dpatterns.afactory;
+
+public class JFXDrawing {
+
+}
