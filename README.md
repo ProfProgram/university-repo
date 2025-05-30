@@ -4,6 +4,7 @@
   * [Directory Tree](#directory-tree)
   * [Tree Navigation Tips](#tree-navigation-tips)
     + [OOP Examples](#oop-examples)
+    + [Modules CS2TP and CS2PLC](#modules-cs2tp-and-cs2plc)
 ## Short Description
 This repository is, as the name implies, a logbook of sorts for my University work. Some may have been committed within other repositories as part of group work, but this is a complete collection.
 ## Directory Tree
