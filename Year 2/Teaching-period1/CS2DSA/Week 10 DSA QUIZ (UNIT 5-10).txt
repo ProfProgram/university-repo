@@ -1,0 +1,31 @@
+Week 10 DSA QUIZ (UNIT 5-10)
+
+q1
+in event that fast = null while stops
+in event that fast.next() = null! while stops
+
+^ fast.next() will always = null first
+while (fast.next() != NULL)
+
+
+q4
+
+concurrent linked queue
+
+links OBJ that hold process desc and timestamp, ordered concurrently
+^knows what is oldest timestamp based on what was entered first, i.e what is last in the queue
+
+
+A = 5, 10, 15, 20
+
+B = 10, 20, 30, 40
+
+result = A = 10 ,20
+
+Your submission was successful!
+Course: 2024_CS2DSA, (2024-25 CS2DSA) Data Structures and Algorithms in Java
+Assessment: CS2DSA Quiz 2a (24-25)
+
+Submission date: 22/11/2024, 15:03
+Submitter: MUHAMMAD ALI
+Confirmation number: 4d5ddf96f0004aa9b379c81bcee5fa2b
