@@ -1,0 +1,11 @@
+Code for IP system deliverable goes here...
+
+In terms of business case, if the system shows reliability then pushing for usage of it may be useful for faster response times. Allowing end users to use their own .xml/.csv file uploads as knowledge-base as well as giving them configurability over the system may allow the bot to widen its analysis from past events and into data-analysis for issues that have yet to be published.
+
+Oct: learning/investigating API technologies useful for data gathering; Creating GitHub repo for version control; Designing architecture for system; Introducing architecture plan into repo (allocating spaces for modules of system, minimal code);
+Nov: Implementing code for base system; terminal-level outputs; configuration file for changing behaviour of system, etc.
+Dec: Building report structure; Building test suite for evaluating system
+Jan: Evaluating changes to system configuration as compared to base
+Feb: writing report; checking related work (quality of references);
+Mar: refinements; adding features (UI/X if able); reviewing report, improving sentences/structure;
+Apr: preparing for presenting demo (creating presentation); submitting report.
