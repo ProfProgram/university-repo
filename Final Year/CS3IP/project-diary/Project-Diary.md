@@ -21,4 +21,22 @@ dates will be in form dd/mm - dd/mm
 - Business Model Canvas
 ![alt text](images/business-model-canva.png)
 
-### Week 4 (8/10 - 14/10) 
+### Week 4 (8/10 - 14/10)
+
+- Overslept and missed meeting
+
+### Week 5 (15/10 - 21/10)
+
+- Poster showing high level overview of project systems
+
+### Week 6 (22/10 - 28/10)
+
+- Failed to make meeting as time was changed to 3PM and did not realize
+- Plan to use LangChain for pipeline integration + LLM flag configuration + saving embeddings as "document" objects
+- Plan to use ACLED’s API + NewsData.io for data grabbing; ACLED will be data points from a non-profit organization that provides real-time, disaggregated data on political violence and protest events globally; NewsData.io is pythonic API for news articles - Both return as JSON objects and with temporal metadata
+- Plan to use all-mpnet-v2 sentence-transformer from HuggingFace as local download, need further information about quality of embeddings from model
+- Next Step; plan to review project plan and refine over Reading week
+
+### Week 7 (29/10 - 4/11)
+
+- Reading Week
