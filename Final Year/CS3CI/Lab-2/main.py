@@ -255,3 +255,9 @@ def tabu_search(tsp_instance, target_time):
       best_distance = best_neighbour_cost
 
   return best_route, best_distance
+
+target_time = 10
+
+t1 = tabu_search(ulysses16_tsp_instance, target_time)
+t2 = tabu_search(ulysses16_tsp_instance, target_time + 10)
+t3 = tabu_search(ulysses16_tsp_instance, target_time + 20)
