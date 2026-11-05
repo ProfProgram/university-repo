@@ -42,3 +42,6 @@ dates will be in form dd/mm - dd/mm
 - Took notes of IP and SPM lectures
 - Need to break down SPM and IP notes into tasks/actions
 - Need to Revise Gantt Chart on GitHub project
+- Use case diagrams not applicable to this project
+- Need to revisit week 5 and 4 powerpoint's from supervisor (for finding research papers + finding gaps/limitations within them)
+- C4 diagram (Architecture Diagram) is applicable to this project
