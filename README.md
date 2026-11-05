@@ -60,4 +60,5 @@ I did use Notepad++, but only for a single project, so my usage of it is not sub
 ### Modules CS2TP and CS2PLC
 Module CS2TP was a coding group project that is already on GitHub.
 The link there is here: <a name="CS2TP-link" href="https://github.com/ProfProgram/Gilded-Canvas">https://github.com/ProfProgram/Gilded-Canvas</a>
+
 Module CS2PLC had a GitHub repository incorporated into assignments, thus it makes more sense to just redirect to here: <a name="CS2PLC-link" href="https://github.com/ProfProgram/PLC2025_210163492">https://github.com/ProfProgram/PLC2025_210163492</a>
