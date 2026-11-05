@@ -37,6 +37,8 @@ dates will be in form dd/mm - dd/mm
 - Plan to use all-mpnet-v2 sentence-transformer from HuggingFace as local download, need further information about quality of embeddings from model
 - Next Step; plan to review project plan and refine over Reading week
 
-### Week 7 (29/10 - 4/11)
+### Week 7 (29/10 - 4/11) - READING WEEK
 
-- Reading Week
+- Took notes of IP and SPM lectures
+- Need to break down SPM and IP notes into tasks/actions
+- Need to Revise Gantt Chart on GitHub project
